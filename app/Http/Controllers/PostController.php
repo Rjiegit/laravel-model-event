@@ -39,6 +39,7 @@ class PostController extends Controller
     {
         $post = new Post;
         $post->content = $request->content;
+        $post->save();
         return response()->json([
             'message' => 'created !!!'
         ]);
