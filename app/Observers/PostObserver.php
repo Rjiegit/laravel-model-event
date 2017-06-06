@@ -13,4 +13,11 @@ class PostObserver
         $log->content = "created!!!";
         $log->save();
     }
+
+    public function creating(Post $post)
+    {
+        $log = new log;
+        $log->content = "creating!!!";
+        $log->save();
+    }
 }
