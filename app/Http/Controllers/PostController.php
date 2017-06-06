@@ -81,6 +81,10 @@ class PostController extends Controller
         $post->content = $request->content;
 
         $post->save();
+
+        return response()->json([
+            'message' => 'updated !!!'
+        ]);
     }
 
     /**
