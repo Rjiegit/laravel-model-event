@@ -20,16 +20,32 @@ class PostObserver
         $log->content = "creating!!!";
         $log->save();
     }
+
     public function updated(Post $post)
     {
         $log = new log;
         $log->content = "updated!!!";
         $log->save();
     }
+
     public function updating(Post $post)
     {
         $log = new log;
         $log->content = "updating!!!";
+        $log->save();
+    }
+
+    public function deleting(Post $post)
+    {
+        $log = new log;
+        $log->content = "deleting!!!";
+        $log->save();
+    }
+
+    public function deleted(Post $post)
+    {
+        $log = new log;
+        $log->content = "deleted!!!";
         $log->save();
     }
 }

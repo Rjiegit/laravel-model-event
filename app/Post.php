@@ -7,6 +7,8 @@ use App\Events\PostSaved;
 use App\Events\PostSaving;
 use App\Events\PostUpdated;
 use App\Events\PostUpdating;
+use App\Events\PostDeleting;
+use App\Events\PostDeleted;
 
 class Post extends Model
 {
@@ -15,5 +17,7 @@ class Post extends Model
         'saving' => PostSaving::class,
         'updated' => PostUpdated::class,
         'updating' => PostUpdating::class,
+        'deleted' => PostDeleted::class,
+        'deleting' => PostDeleting::class,
     ];
 }
